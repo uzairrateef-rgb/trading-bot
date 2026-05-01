@@ -1,0 +1,29 @@
+# ─── Core dependencies (required for cli.py) ───────────────────────────────────
+#
+# These are the only packages you need to run the manual order placer.
+# Install with: pip install -r requirements.txt
+
+requests>=2.31.0          # HTTP client for Binance REST API calls
+python-dotenv>=1.0.0      # Loads API keys from .env file
+
+
+# ─── Automated strategy bot (required for trading_bot.py) ──────────────────────
+#
+# Only needed if you're running the bonus strategy bot, not the CLI.
+
+ccxt>=4.2.0               # Unified crypto exchange library
+pandas>=2.0.0             # Data manipulation for indicator calculations
+numpy>=1.24.0             # Numerical operations (RSI, EMA, ATR)
+flask>=3.0.0              # Lightweight web server for the live dashboard
+aiohttp>=3.9.0            # Async HTTP for Polymarket API calls
+
+
+# ─── Optional extras ────────────────────────────────────────────────────────────
+
+# Enables WebSocket streaming in trading_bot.py (faster than REST polling).
+# Install with: pip install "ccxt[pro]"
+# ccxt[pro]>=4.2.0
+
+# Fixes async DNS resolution issues with aiohttp on some Linux setups.
+# Install with: pip install aiodns
+# aiodns>=3.1.0
